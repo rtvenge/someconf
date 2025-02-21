@@ -1,0 +1,4 @@
+name: someconf
+recipe: lamp
+config:
+  webroot: .
