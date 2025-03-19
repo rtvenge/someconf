@@ -1,27 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SomeConf 2025</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        iframe {
-            width: 100%;
-            border: none;
-            height: 1200px;
-        }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      section {
+        scroll-margin-top: 60px;
+      }
     </style>
 </head>
-<body class="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-6">
-  <div class="max-w-3xl bg-white rounded-2xl shadow-lg p-8 text-center">
-    <h1 class="text-4xl font-bold text-gray-900 mb-4">SomeConf 2025</h1>
+<body class="bg-gradient-to-r from-blue-200 via-purple-200 to-blue-300 text-gray-900">
+  <!-- Navigation -->
+  <nav class="bg-gray-800 text-white py-4 sticky top-0 left-0 w-full z-10">
+    <div class="max-w-5xl mx-auto flex justify-between items-center px-4">
+      <div class="text-lg font-bold">SomeConf 2025</div>
+      <button id="menu-toggle" class="text-white focus:outline-none md:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+      <div id="menu" class="hidden md:flex space-x-6">
+        <a href="#about" class="hover:text-blue-400">About</a>
+        <a href="#survey" class="hover:text-blue-400">Survey</a>
+        <a href="#expectations" class="hover:text-blue-400">What to Expect</a>
+        <a href="#details" class="hover:text-blue-400">Details</a>
+        <a href="#newsletter" class="hover:text-blue-400">Newsletter</a>
+        <a href="#organizers" class="hover:text-blue-400">Organizers</a>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden bg-gray-800 md:hidden">
+      <a href="#about" class="block py-2 px-4 hover:bg-gray-700">About</a>
+      <a href="#survey" class="block py-2 px-4 hover:bg-gray-700">Survey</a>
+      <a href="#expectations" class="block py-2 px-4 hover:bg-gray-700">What to Expect</a>
+      <a href="#details" class="block py-2 px-4 hover:bg-gray-700">Details</a>
+      <a href="#newsletter" class="block py-2 px-4 hover:bg-gray-700">Newsletter</a>
+      <a href="#organizers" class="block py-2 px-4 hover:bg-gray-700">Organizers</a>
+    </div>
+  </nav>
 
-    <p class="text-lg text-gray-600 mb-4">
-      Join us for an <strong>exciting conference in late 2025 in the Twin Cities</strong>! Fill out the form below to stay updated and be the first to know when tickets go on sale.
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20 px-6 text-center">
+    <h1 class="text-5xl font-bold">SomeConf 2025</h1>
+    <p class="mt-4 text-xl">A Conference for Web & Digital Pros in Minnesota & the Midwest</p>
+
+    <a href="#newsletter" class="mt-4 inline-block bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold">Stay Updated</a>
+
+    <a href="#survey" class="mt-4 inline-block bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold">Take the Survey</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-12 px-6 max-w-4xl mx-auto text-center">
+    <p class="text-lg mb-6">
+      Calling all web developers, marketers, content creators, and agency professionals!<br>
+      <span class="font-semibold">SomeConf 2025</span> is a brand-new event designed to bring together the digital marketing and website development community across Minneapolis, Minnesota, and the Midwest.
     </p>
+    <p class="text-lg mb-8">Join us for expert-led sessions, hands-on learning, and meaningful connections.</p>
+    <p class="text-lg">Whether you build websites, manage content, run an agency, or drive digital marketing strategies, this conference is for you.</p>
+  </section>
 
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSckQ1X3NfB9pEhELN9qRuY5JPczsgA-eaFzfW_k-s8oOJzZ_A/viewform?embedded=true" width="640" height="1186" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-  </div>
+  <section id="survey" class="max-w-3xl mx-auto flex flex-col items-center justify-center text-center py-12 bg-gray-100 rounded-lg shadow-md mb-8">
+    <h2 class="text-3xl font-bold mb-8">📊 Help Shape the Conference</h2>
+
+    <p class="text-lg mb-6">We want to hear from you! Help us shape the SomeConf 2025 agenda by taking our survey.</p>
+
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSckQ1X3NfB9pEhELN9qRuY5JPczsgA-eaFzfW_k-s8oOJzZ_A/viewform" class="mt-4 inline-block bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold">Take the Survey</a>
+  </section>
+
+  <!-- What to Expect -->
+  <section id="expectations" class="bg-gray-100 py-12 px-6">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">📌 What to Expect:</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+        <div class="p-6 bg-white rounded-lg shadow">
+          <h3 class="text-xl font-semibold">🔧 Tracks for Developers & CMS</h3>
+          <p class="mt-2">Explore platforms like WordPress, Drupal, and more.</p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow">
+          <h3 class="text-xl font-semibold">📈 Deep Dives into SEO & Content</h3>
+          <p class="mt-2">Learn the latest content strategy and SEO practices.</p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow">
+          <h3 class="text-xl font-semibold">🤖 AI Tools & Emerging Trends</h3>
+          <p class="mt-2">Stay ahead with insights on AI shaping our industry.</p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow">
+          <h3 class="text-xl font-semibold">🤝 Community & Collaboration</h3>
+          <p class="mt-2">Build connections and strengthen our local community.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Event Details -->
+  <section id="details" class="py-12 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-6">📍 When & Where</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+      <div class="p-6 bg-white rounded-lg shadow mb-8">
+        <h2 class="text-2xl font-bold mb-6">Dates</h2>
+        <p class="text-lg mb-4">Planning for Fall 2025<br>
+          <em>Exact dates coming soon!</em></p>
+      </div>
+      <div class="p-6 bg-white rounded-lg shadow mb-8">
+        <h2 class="text-2xl font-bold mb-6">Location</h2>
+        <p class="text-lg mb-4">Twin Cities, Minnesota</p>
+      </div>
+      <div class="p-6 bg-white rounded-lg shadow mb-8">
+        <h2 class="text-2xl font-bold mb-6">Format</h2>
+        <p class="text-lg mb-6">Two full days of programming<br>
+        <em>Friday & Saturday</em></p>
+      </div>
+    </div>
+    <p class="text-lg max-w-3xl mx-auto">This is more than just a conference—it’s a gathering of the brightest minds in web and digital marketing, designed to support and grow our industry in the Midwest.</p>
+  </section>
+
+  <!-- Sign Up Section -->
+  <section id="newsletter" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-4">Want to be part of it?</h2>
+    <p class="text-lg mb-6">Sign up below for updates and be the first to know when tickets go on sale!</p>
+    <form class="max-w-lg mx-auto">
+      <input type="email" placeholder="Enter your email" class="w-full px-4 py-2 rounded-md text-gray-800" required>
+      <button type="submit" class="mt-4 px-6 py-2 bg-white text-blue-600 hover:bg-white font-bold rounded-md">Sign Up</button>
+    </form>
+  </section>
+
+  <!-- Meet Your Organizers -->
+  <section id="organizers" class="py-12 px-6 max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6">👋 Meet Your Organizers</h2>
+    <p class="text-lg mb-8">We're a scrappy group of website professionals, who are passionate about community engagement. We look forward to getting to know you at SomeConf 2025!</p>
+
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+      <div class="flex flex-col items-center">
+      <img src="/images/nate.jpg" alt="Nate Finch" class="w-32 h-32 rounded-full">
+      <p class="mt-4 font-semibold">Nate Finch</p>
+      </div>
+      <div class="flex flex-col items-center">
+      <img src="/images/michelle.jpg" alt="Michelle Schulp Hunt" class="w-32 h-32 rounded-full">
+      <p class="mt-4 font-semibold">Michelle Schulp Hunt</p>
+      </div>
+      <div class="flex flex-col items-center">
+      <img src="/images/jess.jpg" alt="Jessi Gurr" class="w-32 h-32 rounded-full">
+      <p class="mt-4 font-semibold">Jessi Gurr</p>
+      </div>
+      <div class="flex flex-col items-center">
+      <img src="/images/ryan.jpg" alt="Ryan Tvenge" class="w-32 h-32 rounded-full">
+      <p class="mt-4 font-semibold">Ryan Tvenge</p>
+      </div>
+      <div class="flex flex-col items-center">
+      <img src="/images/kayla.jpg" alt="Kayla Demopoulos" class="w-32 h-32 rounded-full">
+      <p class="mt-4 font-semibold">Kayla Demopoulos</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6 text-center">
+    <p>© 2025 SomeConf. All rights reserved.</p>
+  </footer>
 </body>
 </html>
