@@ -1,0 +1,53 @@
+/*
+Theme Name: SomeConf
+Theme URI:
+Author: Ryan Tvenge
+Author URI:
+Description: A child theme from Twenty Twenty Five for SomeConf.
+Requires at least: 6.7
+Tested up to: 6.7
+Requires PHP: 5.7
+Version:
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Template: twentytwentyfive
+Text Domain: someconf
+Tags:
+*/
+
+html {
+	scroll-behavior: smooth;
+}
+
+[id] {
+	scroll-margin-top: 100px;
+}
+
+.wp-site-blocks > header.wp-block-template-part:first-child {
+	position: sticky;
+	top: 0;
+	background-color: #fff;
+	z-index: 1000;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logged-in .wp-site-blocks > header.wp-block-template-part:first-child {
+	top: 32px;
+}
+
+.entry-content > .alignfull + .alignfull {
+	margin-top: 0;
+}
+
+.has-custom-blue-purple-gradient-background .gform-field-label {
+	color: #fff !important;
+}
+
+.has-custom-blue-purple-gradient-background .gfield_required {
+	color: #fff;
+}
+
+.has-custom-blue-purple-gradient-background .gform_button {
+	background: #fff !important;
+	color: #000 !important;
+}
